@@ -1,8 +1,8 @@
 export async function fetchJson(url, options = {}){
-    const headers = {Accept: 'application/json', ...options.headers};
-    const reponse= await fetch(url, {...options, headers});
-    if(reponse.ok){
-        return reponse.json();
+    const header = {Accept: 'application/json', ...options.headers};
+    const re= await fetch(url, { ...options, header});
+    if(re.ok){
+        return re.json();
     }
     throw new Error('erreur serveur',{cause: r})
 
