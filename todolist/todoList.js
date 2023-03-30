@@ -6,10 +6,13 @@
  */
 
 export class todoList{
+    /**@type {Todo[]} */
     #todos = []
+    /**@param {Todo[]} todos */
     constructor(todos){
         this.#todos = todos
     }
+    /**@param {HTMLElement}element */
     appendTo(element){
         element.innerHTML = `
         <div class="input-group mb-3">
@@ -22,8 +25,23 @@ export class todoList{
                     <button class="btn btn-primary" type="button">A faire</button>
                     <button class="btn btn-primary" type="button">Faites</button>
                   </div>
+                  <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            Default checkbox <span><button type="button" class="btn btn-outline-danger">Danger</button></span>  </li>
+                        </label>
+                        </div>
+                        <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Checked checkbox
+                        </label>
+                  </div>
             </main>
         `
 
+
+
     }
 }
+
