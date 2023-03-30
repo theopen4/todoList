@@ -49,7 +49,8 @@ class todoListItem {
             class: 'form-check-input',
             type:  'checkbox',
             value:"",
-            id
+            id,
+            checked: todo.completed
         })
         
         const label = createElements('label', {
