@@ -1,3 +1,4 @@
+import { createElements } from "./dom.js"
 /**
  * @typedef {object} Todo
  * @property {number} id
@@ -39,8 +40,42 @@ export class todoList{
                   </div>
             </main>
         `
+    }
+}
 
-
+class todoListItem {
+    /**@type {Todo} */
+    
+    constructor(todo){
+        const id =` todo-${todo.id}`
+        const div = createElements('div', {
+            class : 'form-check'
+        })
+        const checkbox = createElements('input',{
+            class: 'form-check-input',
+            type:  'checkbox',
+            id
+        })
+        
+        const label = document.createElements('label', {
+            class: 'form-check-label',
+            for: id
+        })
+        label.innerText = todo.title
+    
+        const button = document.createElements('button',{
+            class: 'btn btn-outline-danger',
+        })
+        button.innerHTML = '<i class ="bi-trash"></i>'
+        div.append(checkbox)
+        div.append(label)
+        div.append(button)
+    }
+    /**
+     * 
+     * @param {HTMLElement} element 
+     */
+    appendTo(element){
 
     }
 }
