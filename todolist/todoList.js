@@ -23,7 +23,7 @@ export class todoList{
             <main class = "mainclass">
                 <div class="btn-group gap-2 d-md-block">
                     <button class="btn btn-primary" type="button">Toutes</button>
-                    <button class="btn btn-primary" type="button">A faire</button>
+                    <button class="btn btn-primary" type="button">A Faire</button>
                     <button class="btn btn-primary" type="button">Faites</button>
                   </div>
             </main>
